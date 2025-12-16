@@ -12,7 +12,6 @@ import {
 import { motion } from "framer-motion";
 import { ArrowRight, Menu, X } from "lucide-react";
 
-type NavItem = "overview" | "orders" | "analytics";
 
 interface Order {
   _id: string;
@@ -54,7 +53,6 @@ const mockOrders: Order[] = [
 ];
 
 function App() {
-  const [nav, setNav] = useState<NavItem>("overview");
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [orders] = useState<Order[]>(mockOrders);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -204,7 +202,6 @@ function App() {
         <PrintFlowHero
           onStartRouting={() => {
             scrollToId("preview");
-            setNav("orders");
           }}
         />
 
