@@ -20,7 +20,7 @@ The API listens on `http://localhost:4000` by default and expects MongoDB on `mo
 
 **Key endpoints**
 
-- **POST `/api/orders`** – Intake endpoint (e.g. TAN webhook). Validates with Zod, stores order, runs routing, and mocks fulfillment.
+- **POST `/api/orders`** – Intake endpoint (e.g. webhook). Validates with Zod, stores order, runs routing, and mocks fulfillment.
 - **GET `/api/orders`** – Returns last 50 orders (requires JWT placeholder header).
 - **POST `/api/orders/:id/complete`** – Marks an order as completed.
 

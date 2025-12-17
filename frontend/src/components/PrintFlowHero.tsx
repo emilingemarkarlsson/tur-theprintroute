@@ -57,7 +57,7 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </button>
               <span className="text-sm text-slate-400">
-                From TAN webhook to doorstep — in three automated steps.
+                From webhook to doorstep — in three automated steps.
               </span>
             </div>
           </motion.div>
@@ -81,7 +81,7 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                 >
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-900/70 px-2.5 py-1 text-xs text-slate-300">
                     <Mail className="h-3.5 w-3.5 text-sky-400" />
-                    <span>TAN Webhook</span>
+                    <span>Webhook</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
                     Intake Request

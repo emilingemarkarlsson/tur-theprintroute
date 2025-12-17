@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./index.css";
 import { PrintFlowHero } from "./components/PrintFlowHero";
+import { EarlyAccessForm } from "./components/EarlyAccessForm";
 import {
   LineChart,
   Line,
@@ -473,16 +474,7 @@ function App() {
               workflow tools like n8n. Share your use case and we&apos;ll send a
               short activation plan.
             </p>
-            <button
-              type="button"
-              className="mt-5 btn-primary"
-              onClick={() =>
-                window.open("mailto:hello@theprintroute.test", "_blank")
-              }
-            >
-              Send us your routing scenario
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </button>
+            <EarlyAccessForm />
           </div>
         </section>
       </main>

@@ -1,0 +1,108 @@
+{
+  "name": "Early Access Form to Slack",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "early-access",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "webhook-node",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [250, 300],
+      "webhookId": "early-access"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { \"success\": true, \"message\": \"Thank you for your interest! We'll be in touch soon.\" } }}"
+      },
+      "id": "respond-node",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Format the message for Slack\n// n8n webhook puts JSON body in body property\nconst rawData = $input.item.json;\nconst data = rawData.body || rawData;\n\nconst slackMessage = {\n  text: `🎯 *New Early Access Request*\\n\\n` +\n        `*Name:* ${data.name || 'Not provided'}\\n` +\n        `*Email:* ${data.email || 'Not provided'}\\n` +\n        `*Message:*\\n${data.message || 'No message provided'}\\n\\n` +\n        `*Timestamp:* ${data.timestamp || new Date().toISOString()}\\n` +\n        `*Source:* ${data.source || 'Unknown'}`,\n  blocks: [\n    {\n      type: 'header',\n      text: {\n        type: 'plain_text',\n        text: '🎯 New Early Access Request'\n      }\n    },\n    {\n      type: 'section',\n      fields: [\n        {\n          type: 'mrkdwn',\n          text: `*Name:*\\n${data.name || 'Not provided'}`\n        },\n        {\n          type: 'mrkdwn',\n          text: `*Email:*\\n${data.email || 'Not provided'}`\n        }\n      ]\n    },\n    {\n      type: 'section',\n      text: {\n        type: 'mrkdwn',\n        text: `*Message:*\\n${data.message || 'No message provided'}`\n      }\n    },\n    {\n      type: 'context',\n      elements: [\n        {\n          type: 'mrkdwn',\n          text: `📅 ${data.timestamp || new Date().toISOString()} | 🔗 ${data.source || 'Unknown'}`\n        }\n      ]\n    }\n  ]\n};\n\nreturn { json: slackMessage };"
+      },
+      "id": "format-node",
+      "name": "Format for Slack",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "resource": "message",
+        "operation": "postMessage",
+        "channel": "={{ $env.SLACK_CHANNEL || '#early-access' }}",
+        "text": "={{ $json.text }}",
+        "otherOptions": {
+          "blocks": "={{ $json.blocks }}"
+        }
+      },
+      "id": "slack-node",
+      "name": "Post to Slack",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 2.1,
+      "position": [850, 300],
+      "credentials": {
+        "slackOAuth2Api": {
+          "id": "slack-credentials",
+          "name": "Slack OAuth2 API"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Format for Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format for Slack": {
+      "main": [
+        [
+          {
+            "node": "Post to Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post to Slack": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2024-12-16T00:00:00.000Z",
+  "versionId": "1"
+}
+
