@@ -13,7 +13,7 @@ const RATE_LIMIT_WINDOW = 10 * 60 * 1000; // 10 minutes in milliseconds
 export const EarlyAccessForm: React.FC<EarlyAccessFormProps> = ({
   webhookUrl,
 }) => {
-  const defaultWebhookUrl = webhookUrl || import.meta.env.VITE_N8N_WEBHOOK_URL || "";
+  const defaultWebhookUrl = webhookUrl || import.meta.env.VITE_N8N_WEBHOOK_URL || "https://n8n.theunnamedroads.com/webhook/contact";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -86,6 +86,7 @@ export const EarlyAccessForm: React.FC<EarlyAccessFormProps> = ({
         body: JSON.stringify({
           name: formData.name.trim(),
           email: formData.email.trim(),
+          subject: "Early Access Request",
           message: formData.message.trim(),
           timestamp: new Date().toISOString(),
           source: "the-print-route-website",

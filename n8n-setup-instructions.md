@@ -7,11 +7,11 @@ Detta workflow tar emot formulärdata från hemsidan och skickar den till en Sla
 1. Öppna din n8n-instans
 2. Klicka på "Workflows" i menyn
 3. Klicka på "Import from File" eller "Import from URL"
-4. Välj filen `n8n-workflow-early-access.json`
+4. Välj filen `tur-contactnotificationtoslack.json` (eller liknande)
 5. Workflow kommer att importeras med 4 noder:
-   - **Webhook** - Tar emot POST requests
+   - **Webhook** - Tar emot POST requests (/webhook/contact)
    - **Format for Slack** - Formaterar meddelandet
-   - **Post to Slack** - Skickar till Slack
+   - **Post to Slack** - Skickar till Slack (kanal: #all-tur-ab)
    - **Respond to Webhook** - Svarar till hemsidan
 
 ## Steg 2: Konfigurera Slack
@@ -19,20 +19,20 @@ Detta workflow tar emot formulärdata från hemsidan och skickar den till en Sla
 1. Klicka på "Post to Slack" noden
 2. Klicka på "Create New Credential" eller använd befintlig Slack OAuth2 credential
 3. Följ instruktionerna för att autentisera med Slack
-4. Välj kanal (t.ex. `#early-access`) eller använd miljövariabel `SLACK_CHANNEL`
+4. Välj kanal (t.ex. `#all-tur-ab`) eller använd miljövariabel `SLACK_CHANNEL`
 
 ## Steg 3: Aktivera Webhook
 
 1. Klicka på "Webhook" noden
 2. Klicka på "Listen for Test Event" eller "Execute Workflow"
-3. Webhook URL:en är: `https://n8n.theunnamedroads.com/webhook/early-access`
+3. Webhook URL:en är: `https://n8n.theunnamedroads.com/webhook/contact`
 4. Denna URL behöver du i nästa steg
 
 ## Steg 4: Konfigurera Frontend
 
 1. Skapa en `.env` fil i `frontend/` mappen:
 ```bash
-VITE_N8N_WEBHOOK_URL=https://n8n.theunnamedroads.com/webhook/early-access
+VITE_N8N_WEBHOOK_URL=https://n8n.theunnamedroads.com/webhook/contact
 ```
 
 2. Starta om dev-servern:
