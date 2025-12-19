@@ -3,6 +3,7 @@ import "./index.css";
 import { PrintFlowHero } from "./components/PrintFlowHero";
 import { EarlyAccessForm } from "./components/EarlyAccessForm";
 import { SEO } from "./components/SEO";
+import { Analytics } from "@vercel/analytics/react";
 import {
   LineChart,
   Line,
@@ -82,6 +83,7 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
       <SEO />
+      <Analytics />
       {/* Top navigation */}
       <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
