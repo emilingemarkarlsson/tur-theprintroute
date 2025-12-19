@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./index.css";
 import { PrintFlowHero } from "./components/PrintFlowHero";
 import { EarlyAccessForm } from "./components/EarlyAccessForm";
+import { SEO } from "./components/SEO";
 import {
   LineChart,
   Line,
@@ -80,16 +81,21 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
+      <SEO />
       {/* Top navigation */}
       <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
-          <button
-            type="button"
+          <a
+            href="#top"
             className="text-lg font-semibold text-slate-50 hover:text-sky-400 transition-colors"
-            onClick={() => scrollToId("top")}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToId("top");
+            }}
+            aria-label="The Print Route - Go to top"
           >
             The Print Route
-          </button>
+          </a>
 
           <nav className="hidden items-center gap-6 text-xs font-medium text-slate-300 md:flex">
             <button
@@ -236,20 +242,20 @@ function App() {
                 },
                 {
                   title: "Reduce support tickets",
-                  body: "Status and tracking links are unified, so fewer customers ask: “where is my order?”.",
+                  body: "Status and tracking links are unified, so fewer customers ask: \"where is my order?\".",
                 },
               ].map((card) => (
-                <div
+                <article
                   key={card.title}
                   className="rounded-xl border border-slate-800 bg-slate-950/70 p-4"
                 >
-                  <p className="text-sm font-semibold text-slate-100">
+                  <h3 className="text-sm font-semibold text-slate-100">
                     {card.title}
-                  </p>
+                  </h3>
                   <p className="mt-2 text-xs text-slate-400 md:text-sm">
                     {card.body}
                   </p>
-                </div>
+                </article>
               ))}
             </div>
           </div>
@@ -269,42 +275,42 @@ function App() {
             </p>
 
             <div className="mt-6 grid gap-4 md:grid-cols-3">
-              <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+              <article className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400" aria-label="Step 1">
                   1. Intake
                 </p>
-                <p className="mt-2 text-sm font-semibold text-slate-100">
+                <h3 className="mt-2 text-sm font-semibold text-slate-100">
                   Connect TAN or n8n
-                </p>
+                </h3>
                 <p className="mt-2 text-xs text-slate-400 md:text-sm">
                   Standardise orders as JSON: file URL, quantity, material, and
                   destination. No PII needed – just anonymous IDs.
                 </p>
-              </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+              </article>
+              <article className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400" aria-label="Step 2">
                   2. Smart routing
                 </p>
-                <p className="mt-2 text-sm font-semibold text-slate-100">
+                <h3 className="mt-2 text-sm font-semibold text-slate-100">
                   Rule-based + AI scoring
-                </p>
+                </h3>
                 <p className="mt-2 text-xs text-slate-400 md:text-sm">
                   Route Sweden large-format to local providers, marketing runs to
                   global providers, and fallbacks to generic partners by SLA and cost.
                 </p>
-              </div>
-              <div className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+              </article>
+              <article className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
+                <p className="text-xs font-semibold uppercase tracking-wide text-slate-400" aria-label="Step 3">
                   3. Fulfillment
                 </p>
-                <p className="mt-2 text-sm font-semibold text-slate-100">
+                <h3 className="mt-2 text-sm font-semibold text-slate-100">
                   Unified tracking layer
-                </p>
+                </h3>
                 <p className="mt-2 text-xs text-slate-400 md:text-sm">
                   Each provider returns tracking into a single, clean URL you can
                   send from your app, CRM, or support tooling.
                 </p>
-              </div>
+              </article>
             </div>
           </div>
         </section>

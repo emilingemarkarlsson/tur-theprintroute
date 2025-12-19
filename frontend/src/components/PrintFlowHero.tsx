@@ -73,14 +73,14 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
               {/* Flow steps */}
               <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-4">
                 {/* Step 1: Intake */}
-                <motion.div
+                <motion.article
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                   className="relative z-10 rounded-xl border border-slate-800 bg-slate-950/90 p-4 backdrop-blur-sm lg:w-1/3"
                 >
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-900/70 px-2.5 py-1 text-xs text-slate-300">
-                    <Mail className="h-3.5 w-3.5 text-sky-400" />
+                    <Mail className="h-3.5 w-3.5 text-sky-400" aria-hidden="true" />
                     <span>Webhook</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
@@ -89,17 +89,17 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                   <p className="text-xs leading-relaxed text-slate-400">
                     JSON payload with file, qty, material &amp; address.
                   </p>
-                </motion.div>
+                </motion.article>
 
                 {/* Step 2: Routing */}
-                <motion.div
+                <motion.article
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
                   className="relative z-10 rounded-xl border border-slate-800 bg-slate-950/90 p-4 backdrop-blur-sm lg:w-1/3"
                 >
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-emerald-900/40 px-2.5 py-1 text-xs text-emerald-200">
-                    <Route className="h-3.5 w-3.5 text-emerald-300" />
+                    <Route className="h-3.5 w-3.5 text-emerald-300" aria-hidden="true" />
                     <span>Smart Routing</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
@@ -124,17 +124,17 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                   <p className="mt-2 text-xs leading-relaxed text-slate-400">
                     Mock AI scores providers by geo, format &amp; price.
                   </p>
-                </motion.div>
+                </motion.article>
 
                 {/* Step 3: Fulfillment */}
-                <motion.div
+                <motion.article
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.7, duration: 0.5 }}
                   className="relative z-10 rounded-xl border border-slate-800 bg-slate-950/90 p-4 backdrop-blur-sm lg:w-1/3"
                 >
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-indigo-900/40 px-2.5 py-1 text-xs text-indigo-200">
-                    <Truck className="h-3.5 w-3.5 text-indigo-300" />
+                    <Truck className="h-3.5 w-3.5 text-indigo-300" aria-hidden="true" />
                     <span>Fulfillment</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
@@ -158,7 +158,7 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                   >
                     <Truck className="h-5 w-5 text-sky-400" aria-hidden="true" />
                   </motion.div>
-                </motion.div>
+                </motion.article>
               </div>
             </div>
           </motion.div>
