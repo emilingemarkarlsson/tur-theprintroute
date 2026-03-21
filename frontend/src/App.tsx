@@ -485,11 +485,42 @@ function App() {
         </section>
       </main>
 
-      <footer className="border-t border-slate-800 bg-slate-950 px-4 py-5 md:px-8">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 text-[11px] text-slate-500 md:flex-row">
-          <p>© {new Date().getFullYear()} The Print Route. All rights reserved.</p>
-          <div className="flex gap-3">
-            <span>GDPR-friendly: no live customer PII in this demo.</span>
+      <footer className="border-t border-slate-800 bg-slate-950 px-4 pt-10 pb-5 md:px-8">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-slate-200">Stay updated</p>
+              <p className="text-xs text-slate-500">Product updates and print routing insights.</p>
+            </div>
+            <form
+              action="https://YOURACCOUNT.ck.page/theprintroute"
+              method="post"
+              className="flex gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <label htmlFor="pr-email" className="sr-only">Email address</label>
+              <input
+                type="email"
+                id="pr-email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                className="h-9 w-52 rounded-lg border border-slate-700 bg-slate-900 px-3 text-sm text-slate-100 placeholder:text-slate-500 focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              />
+              <button
+                type="submit"
+                className="h-9 rounded-lg bg-sky-600 px-4 text-sm font-semibold text-white transition-opacity hover:opacity-90 whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div className="flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-5 text-[11px] text-slate-500 md:flex-row">
+            <p>© {new Date().getFullYear()} The Print Route. All rights reserved.</p>
+            <div className="flex gap-3">
+              <span>GDPR-friendly: no live customer PII in this demo.</span>
+            </div>
           </div>
         </div>
       </footer>
