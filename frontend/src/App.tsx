@@ -493,12 +493,13 @@ function App() {
               <p className="text-xs text-slate-500">Product updates and print routing insights.</p>
             </div>
             <form
-              action="https://YOURACCOUNT.ck.page/theprintroute"
+              action="https://listmonk-v8wk0kksk00wgk0g0c4wsww0.46.62.206.47.sslip.io/subscription/form"
               method="post"
               className="flex gap-2"
               target="_blank"
               rel="noopener noreferrer"
             >
+              <input type="hidden" name="l" value="9725bc88-729a-4344-99d2-5866a2d7b26b" />
               <label htmlFor="pr-email" className="sr-only">Email address</label>
               <input
                 type="email"
