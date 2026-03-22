@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import AnnouncementBar from "./components/AnnouncementBar";
 import "./index.css";
 import { PrintFlowHero } from "./components/PrintFlowHero";
 import { EarlyAccessForm } from "./components/EarlyAccessForm";
@@ -81,6 +82,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
+      <AnnouncementBar />
       <SEO />
       {/* Top navigation */}
       <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
