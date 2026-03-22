@@ -495,7 +495,7 @@ function App() {
               <p className="text-xs text-slate-500">Product updates and print routing insights.</p>
             </div>
             <form
-              action="https://listmonk-v8wk0kksk00wgk0g0c4wsww0.46.62.206.47.sslip.io/subscription/form"
+              action="https://n8n.theunnamedroads.com/webhook/newsletter-subscribe"
               method="post"
               className="flex gap-2"
               target="_blank"

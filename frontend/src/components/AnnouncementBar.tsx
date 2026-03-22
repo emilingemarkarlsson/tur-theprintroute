@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const LISTMONK_URL = 'https://listmonk-v8wk0kksk00wgk0g0c4wsww0.46.62.206.47.sslip.io/subscription/form';
+const LISTMONK_URL = 'https://n8n.theunnamedroads.com/webhook/newsletter-subscribe';
 const LIST_UUID = '9725bc88-729a-4344-99d2-5866a2d7b26b';
 
 export default function AnnouncementBar() {
