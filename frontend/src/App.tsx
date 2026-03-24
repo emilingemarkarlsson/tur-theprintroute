@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import Blog from "./components/Blog";
 import { useEffect, useMemo, useState } from "react";
 import AnnouncementBar from "./components/AnnouncementBar";
 import "./index.css";
@@ -56,6 +58,29 @@ const mockOrders: Order[] = [
 ];
 
 function App() {
+  const [blogSlug, setBlogSlug] = useState<string | null>(null);
+  const [showBlog, setShowBlog] = useState(false);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    if (path === "/blog" || path === "/blog/") {
+      setShowBlog(true);
+    } else if (path.startsWith("/blog/")) {
+      setShowBlog(true);
+      setBlogSlug(path.replace("/blog/", "").replace(/\/$/, ""));
+    }
+  }, []);
+
+  if (showBlog) {
+    return (
+      <Blog
+        slug={blogSlug || undefined}
+        onBack={() => { setBlogSlug(null); window.history.pushState({}, "", "/blog"); }}
+        onNavigate={(slug) => { setBlogSlug(slug); window.history.pushState({}, "", `/blog/${slug}`); }}
+      />
+    );
+  }
+
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [orders] = useState<Order[]>(mockOrders);
   const [mobileOpen, setMobileOpen] = useState(false);
