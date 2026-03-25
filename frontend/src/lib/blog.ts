@@ -35,7 +35,7 @@ function markdownToHtml(md: string): string {
     .replace(/^# (.+)$/gm, "<h1 class=\"text-2xl font-bold mt-8 mb-3\">$1</h1>")
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
-    .replace(/`(.+?)`/g, "<code class=\"bg-gray-100 px-1 rounded text-sm font-mono\">$1</code>")
+    .replace(/`(.+?)`/g, "<code class=\"bg-slate-800 px-1 rounded text-sm font-mono text-sky-300\">$1</code>")
     .replace(/^- (.+)$/gm, "<li class=\"ml-5 list-disc mb-1\">$1</li>")
     .replace(/\n\n/g, "</p>\n<p class=\"mb-4 leading-relaxed\">")
     .replace(/^(?!<[hH1-6li])(.+)$/gm, "<p class=\"mb-4 leading-relaxed\">$1</p>")
