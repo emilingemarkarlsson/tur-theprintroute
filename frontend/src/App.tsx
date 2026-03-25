@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import Blog from "./components/Blog";
 import { useEffect, useMemo, useState } from "react";
+import Blog from "./components/Blog";
 import AnnouncementBar from "./components/AnnouncementBar";
 import "./index.css";
 import { PrintFlowHero } from "./components/PrintFlowHero";
@@ -71,16 +70,6 @@ function App() {
     }
   }, []);
 
-  if (showBlog) {
-    return (
-      <Blog
-        slug={blogSlug || undefined}
-        onBack={() => { setBlogSlug(null); window.history.pushState({}, "", "/blog"); }}
-        onNavigate={(slug) => { setBlogSlug(slug); window.history.pushState({}, "", `/blog/${slug}`); }}
-      />
-    );
-  }
-
   const [theme, setTheme] = useState<"light" | "dark">("dark");
   const [orders] = useState<Order[]>(mockOrders);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -104,6 +93,16 @@ function App() {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
+
+  if (showBlog) {
+    return (
+      <Blog
+        slug={blogSlug || undefined}
+        onBack={() => { setBlogSlug(null); window.history.pushState({}, "", "/blog"); }}
+        onNavigate={(slug) => { setBlogSlug(slug); window.history.pushState({}, "", `/blog/${slug}`); }}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
