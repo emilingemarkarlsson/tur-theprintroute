@@ -1,6 +1,6 @@
 ---
 title: "Cutting Print Procurement Costs By 30 Percent"
-description: "## Introduction to Cutting Print Procurement Costs In today's fast-paced business environment, companies are constantly looking for ways to reduce costs and inc"
+description: "A data-driven analysis of where print procurement costs actually come from — and how to cut them by 30% through supplier consolidation, spec standardisation, and digital workflows."
 publishDate: "2026-03-25"
 tags: ["print", "procurement"]
 ---
