@@ -647,6 +647,14 @@ function App() {
               </button>
             </form>
           </div>
+          <div className="mb-5 border-t border-slate-800 pt-5 text-[11px] text-slate-500">
+            <p className="mb-2 font-semibold uppercase tracking-wider text-slate-600">Also from the studio</p>
+            <div className="flex flex-wrap gap-4">
+              <a href="https://tan-website.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">The Atomic Network</a>
+              <a href="https://theagentfabric.com/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">The Agent Fabric</a>
+              <a href="https://theunnamedroads.com/" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">The Unnamed Roads</a>
+            </div>
+          </div>
           <div className="flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-5 text-[11px] text-slate-500 md:flex-row">
             <p>© {new Date().getFullYear()} The Print Route. All rights reserved. Part of{' '}
               <a href="https://theunnamedroads.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-300 transition-colors">theunnamedroads.com</a>
