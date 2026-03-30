@@ -648,7 +648,9 @@ function App() {
             </form>
           </div>
           <div className="flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-5 text-[11px] text-slate-500 md:flex-row">
-            <p>© {new Date().getFullYear()} The Print Route. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} The Print Route. All rights reserved. Part of{' '}
+              <a href="https://theunnamedroads.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-300 transition-colors">theunnamedroads.com</a>
+            </p>
             <div className="flex gap-3">
               <span>GDPR-friendly: no live customer PII in this demo.</span>
             </div>
