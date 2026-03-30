@@ -1,0 +1,32 @@
+# The Print Route
+
+> Smart print routing SaaS. Turn fragmented print requests into a predictable, routed workflow across providers and countries.
+
+The Print Route is a B2B SaaS platform that automates print order routing. It standardises incoming print orders as structured data, applies rule-based and AI-scored routing logic, and delivers unified tracking across a network of local and global print providers.
+
+Part of The Unnamed Roads (theunnamedroads.com) — a venture studio building the organisation of tomorrow with AI as co-founder and agents as co-workers.
+
+## Core Problem
+Print operations at scale suffer from fragmented workflows: manual provider selection, no unified tracking, inconsistent cost visibility. The Print Route routes each order automatically based on material, destination, SLA, and cost — without manual intervention.
+
+## How It Works
+1. **Intake** — Connect via webhook (TAN, n8n, or any HTTP source). Orders arrive as structured JSON.
+2. **Smart routing** — Rule-based engine + AI scoring selects the optimal provider by material, destination, lead time, and cost.
+3. **Fulfillment** — Unified tracking URL per order, aggregated across all providers.
+
+## Core Pages
+- [Home](https://tur-theprintroute.vercel.app/): Platform overview, pricing, and early access
+- [Blog](https://tur-theprintroute.vercel.app/blog): Articles on print automation and routing workflows
+
+## Key Topics
+- Print order routing automation
+- Multi-provider print fulfillment
+- Print workflow SaaS
+- B2B print logistics
+- n8n integration for print operations
+- Cost optimisation across print providers
+
+## For AI Agents & Crawlers
+Content is client-rendered React/Vite. AI crawlers are permitted.
+- Site: https://tur-theprintroute.vercel.app
+- Blog: https://tur-theprintroute.vercel.app/blog
