@@ -41,24 +41,28 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
           <motion.div variants={itemVariants} className="space-y-6 lg:w-1/2">
             <span className="badge">Print routing SaaS</span>
             <h1 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-              The Print Route: Seamless Routing for Every Print Need
+              Automatic print routing — from order to doorstep
             </h1>
             <p className="max-w-xl text-pretty text-slate-300">
-              Send your order – we analyze geo, format, and price, then route it
-              to the optimal provider and handle delivery end-to-end.
+              Submit a print order via API or portal. The Print Route matches it to the best available provider based on format, material, destination, and price — then tracks fulfillment end-to-end.
             </p>
             <div className="flex flex-wrap items-center gap-4">
-              <button
+              <a
+                href="https://app.theprintroute.com"
                 className="btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open app
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+              </a>
+              <button
+                className="text-sm text-slate-400 hover:text-slate-200"
                 type="button"
                 onClick={onStartRouting}
               >
-                Start Routing
-                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                See how it works ↓
               </button>
-              <span className="text-sm text-slate-400">
-                From webhook to doorstep — in three automated steps.
-              </span>
             </div>
           </motion.div>
 
@@ -81,13 +85,13 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                 >
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-slate-900/70 px-2.5 py-1 text-xs text-slate-300">
                     <Mail className="h-3.5 w-3.5 text-sky-400" aria-hidden="true" />
-                    <span>Webhook</span>
+                    <span>API / Portal</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
-                    Intake Request
+                    Submit Order
                   </h3>
                   <p className="text-xs leading-relaxed text-slate-400">
-                    JSON payload with file, qty, material &amp; address.
+                    REST API or web portal. Format, material, quantity, destination — tokens debited on confirmation.
                   </p>
                 </motion.article>
 
@@ -100,30 +104,26 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                 >
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-emerald-900/40 px-2.5 py-1 text-xs text-emerald-200">
                     <Route className="h-3.5 w-3.5 text-emerald-300" aria-hidden="true" />
-                    <span>Smart Routing</span>
+                    <span>Provider Matching</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
-                    Rule-based + AI
+                    Capability + Price Routing
                   </h3>
                   <div className="space-y-1.5 text-xs leading-relaxed text-slate-300">
                     <p>
-                      If{" "}
+                      Matches by{" "}
                       <span className="font-semibold text-slate-50">
-                        Sweden + large-format
-                      </span>{" "}
-                      → Local provider
+                        format, material, country
+                      </span>
                     </p>
                     <p>
-                      If{" "}
+                      Selects{" "}
                       <span className="font-semibold text-slate-50">
-                        marketing / global
+                        lowest total cost
                       </span>{" "}
-                      → Global provider
+                      among eligible providers
                     </p>
                   </div>
-                  <p className="mt-2 text-xs leading-relaxed text-slate-400">
-                    Mock AI scores providers by geo, format &amp; price.
-                  </p>
                 </motion.article>
 
                 {/* Step 3: Fulfillment */}
@@ -138,10 +138,10 @@ export const PrintFlowHero: React.FC<PrintFlowHeroProps> = ({ onStartRouting }) 
                     <span>Fulfillment</span>
                   </div>
                   <h3 className="mb-2 text-sm font-semibold text-slate-100">
-                    Delivery &amp; Tracking
+                    Fulfillment &amp; Tracking
                   </h3>
                   <p className="text-xs leading-relaxed text-slate-400">
-                    Provider ships, we email tracking to you.
+                    Provider accepts, produces, and ships. Tracking number flows back to you via webhook.
                   </p>
                   {/* Animated truck icon */}
                   <motion.div

@@ -113,13 +113,14 @@ function App() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-8">
           <a
             href="#top"
-            className="text-lg font-semibold text-slate-50 hover:text-sky-400 transition-colors"
+            className="flex items-center gap-2.5 text-lg font-semibold text-slate-50 hover:text-sky-400 transition-colors"
             onClick={(e) => {
               e.preventDefault();
               scrollToId("top");
             }}
             aria-label="The Print Route - Go to top"
           >
+            <img src="/logo.svg" alt="" className="h-7 w-7" aria-hidden="true" />
             The Print Route
           </a>
 
@@ -293,16 +294,16 @@ function App() {
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               {[
                 {
-                  title: "Discover hidden capacity",
-                  body: "Balance volume across local and global providers without losing control of costs or lead times.",
+                  title: "One API, many providers",
+                  body: "Connect once via REST API or the built-in portal. Orders are automatically matched to the best available provider — no manual coordination.",
                 },
                 {
-                  title: "Accelerate operations",
-                  body: "Stop chasing emails. Define rules once and let routing run automatically from tools like TAN or n8n.",
+                  title: "Routing based on real data",
+                  body: "Providers register their capabilities: formats, materials, countries, and price lists. Every order is matched against this live data.",
                 },
                 {
-                  title: "Reduce support tickets",
-                  body: "Status and tracking links are unified, so fewer customers ask: \"where is my order?\".",
+                  title: "Full order visibility",
+                  body: "Track every order from submission to delivery. Providers update status and tracking numbers directly in the platform.",
                 },
               ].map((card) => (
                 <article
@@ -331,44 +332,41 @@ function App() {
               How it works
             </h2>
             <p className="mt-2 text-lg font-semibold text-slate-50 md:text-2xl">
-              From incoming webhook to delivered print – in three steps.
+              From order to doorstep — in three steps.
             </p>
 
             <div className="mt-6 grid gap-4 md:grid-cols-3">
               <article className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400" aria-label="Step 1">
-                  1. Intake
+                  1. Connect
                 </p>
                 <h3 className="mt-2 text-sm font-semibold text-slate-100">
-                  Connect TAN or n8n
+                  API key + token balance
                 </h3>
                 <p className="mt-2 text-xs text-slate-400 md:text-sm">
-                  Standardise orders as JSON: file URL, quantity, material, and
-                  destination. No PII needed – just anonymous IDs.
+                  Get an API key and top up tokens. Submit orders via the REST API or the built-in customer portal.
                 </p>
               </article>
               <article className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400" aria-label="Step 2">
-                  2. Smart routing
+                  2. Route
                 </p>
                 <h3 className="mt-2 text-sm font-semibold text-slate-100">
-                  Rule-based + AI scoring
+                  Capability + price matching
                 </h3>
                 <p className="mt-2 text-xs text-slate-400 md:text-sm">
-                  Route Sweden large-format to local providers, marketing runs to
-                  global providers, and fallbacks to generic partners by SLA and cost.
+                  The engine matches by format, material, and delivery country — then selects the lowest-cost eligible provider automatically.
                 </p>
               </article>
               <article className="rounded-xl border border-slate-800 bg-slate-950/70 p-4">
                 <p className="text-xs font-semibold uppercase tracking-wide text-slate-400" aria-label="Step 3">
-                  3. Fulfillment
+                  3. Fulfill
                 </p>
                 <h3 className="mt-2 text-sm font-semibold text-slate-100">
-                  Unified tracking layer
+                  Provider produces &amp; ships
                 </h3>
                 <p className="mt-2 text-xs text-slate-400 md:text-sm">
-                  Each provider returns tracking into a single, clean URL you can
-                  send from your app, CRM, or support tooling.
+                  The provider accepts the order, updates production status, and adds tracking. You get a webhook callback at every stage.
                 </p>
               </article>
             </div>
