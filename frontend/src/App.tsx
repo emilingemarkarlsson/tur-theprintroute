@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import Blog from "./components/Blog";
+import Docs from "./components/Docs";
 import AnnouncementBar from "./components/AnnouncementBar";
 import "./index.css";
 import { PrintFlowHero } from "./components/PrintFlowHero";
@@ -59,6 +60,7 @@ const mockOrders: Order[] = [
 function App() {
   const [blogSlug, setBlogSlug] = useState<string | null>(null);
   const [showBlog, setShowBlog] = useState(false);
+  const [showDocs, setShowDocs] = useState(false);
 
   useEffect(() => {
     const path = window.location.pathname;
@@ -67,6 +69,8 @@ function App() {
     } else if (path.startsWith("/blog/")) {
       setShowBlog(true);
       setBlogSlug(path.replace("/blog/", "").replace(/\/$/, ""));
+    } else if (path === "/docs" || path === "/docs/") {
+      setShowDocs(true);
     }
   }, []);
 
@@ -93,6 +97,10 @@ function App() {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
+
+  if (showDocs) {
+    return <Docs onBack={() => { setShowDocs(false); window.history.pushState({}, "", "/"); }} />;
+  }
 
   if (showBlog) {
     return (
@@ -153,6 +161,13 @@ function App() {
             >
               Contact
             </button>
+            <a
+              href="/docs"
+              onClick={(e) => { e.preventDefault(); setShowDocs(true); window.history.pushState({}, "", "/docs"); }}
+              className="hover:text-slate-50"
+            >
+              Docs
+            </a>
             <a
               href="https://app.theprintroute.com"
               target="_blank"
