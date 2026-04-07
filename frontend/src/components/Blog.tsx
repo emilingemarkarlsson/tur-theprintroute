@@ -18,6 +18,22 @@ function BlogList({ onNavigate }: { onNavigate: (slug: string) => void }) {
         description="Insights on print production, manufacturing workflows, and supply chain innovation."
         url={`${baseUrl}/blog`}
       />
+      <header className="border-b border-slate-800 bg-slate-950/90 backdrop-blur px-6 py-4">
+        <div className="max-w-3xl mx-auto flex items-center justify-between">
+          <a href="/" className="flex items-center gap-2.5 text-sm font-semibold text-slate-50 hover:text-sky-400 transition-colors">
+            <img src="/logo.svg" alt="" className="h-6 w-6" aria-hidden="true" />
+            The Print Route
+          </a>
+          <a
+            href="https://app.theprintroute.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-sky-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-sky-500 transition-colors"
+          >
+            Open app →
+          </a>
+        </div>
+      </header>
       <div className="max-w-3xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold mb-3 text-slate-50">The Print Route Blog</h1>
         <p className="text-slate-400 mb-12">Insights on print production, manufacturing workflows, and supply chain innovation.</p>
@@ -69,6 +85,22 @@ function BlogPost({ slug, onBack }: { slug: string; onBack: () => void }) {
         description={post.description}
         url={`${baseUrl}/blog/${post.slug}`}
       />
+      <header className="border-b border-slate-800 bg-slate-950/90 backdrop-blur px-6 py-4">
+        <div className="max-w-3xl mx-auto flex items-center justify-between">
+          <a href="/" className="flex items-center gap-2.5 text-sm font-semibold text-slate-50 hover:text-sky-400 transition-colors">
+            <img src="/logo.svg" alt="" className="h-6 w-6" aria-hidden="true" />
+            The Print Route
+          </a>
+          <a
+            href="https://app.theprintroute.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-sky-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-sky-500 transition-colors"
+          >
+            Open app →
+          </a>
+        </div>
+      </header>
       <div className="max-w-3xl mx-auto px-6 py-16">
         <button onClick={onBack} className="text-sm text-slate-400 hover:text-slate-200 hover:underline mb-8 inline-block">
           ← Back to blog

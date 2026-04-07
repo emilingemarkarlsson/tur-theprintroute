@@ -141,24 +141,10 @@ function App() {
             </button>
             <button
               type="button"
-              onClick={() => scrollToId("preview")}
-              className="hover:text-slate-50"
-            >
-              Dashboard
-            </button>
-            <button
-              type="button"
               onClick={() => scrollToId("pricing")}
               className="hover:text-slate-50"
             >
               Pricing
-            </button>
-            <button
-              type="button"
-              onClick={() => scrollToId("customers")}
-              className="hover:text-slate-50"
-            >
-              Customers
             </button>
             <button
               type="button"
@@ -167,15 +153,14 @@ function App() {
             >
               Contact
             </button>
-            <button
-              type="button"
-              onClick={() =>
-                setTheme((t) => (t === "dark" ? "light" : "dark"))
-              }
-              className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-[11px]"
+            <a
+              href="https://app.theprintroute.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-sky-600 px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-sky-500 transition-colors"
             >
-              {theme === "dark" ? "Dark" : "Light"}
-            </button>
+              Open app →
+            </a>
           </nav>
 
           <button
@@ -251,15 +236,14 @@ function App() {
               >
                 Contact
               </button>
-              <button
-                type="button"
-                onClick={() =>
-                  setTheme((t) => (t === "dark" ? "light" : "dark"))
-                }
-                className="mt-1 w-fit rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-[11px]"
+              <a
+                href="https://app.theprintroute.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 w-fit rounded-lg bg-sky-600 px-4 py-2 text-sm font-semibold text-white"
               >
-                {theme === "dark" ? "Dark" : "Light"}
-              </button>
+                Open app →
+              </a>
             </div>
           </div>
         )}
@@ -550,13 +534,14 @@ function App() {
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Unified tracking</li>
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Webhook intake</li>
                 </ul>
-                <button
-                  type="button"
-                  onClick={() => scrollToId("contact")}
-                  className="w-full rounded-lg border border-slate-600 py-2.5 text-sm font-semibold text-white transition hover:border-slate-400"
+                <a
+                  href="https://app.theprintroute.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-lg border border-slate-600 py-2.5 text-center text-sm font-semibold text-white transition hover:border-slate-400"
                 >
-                  Request access
-                </button>
+                  Get started →
+                </a>
               </div>
 
               {/* Growth */}
@@ -573,13 +558,14 @@ function App() {
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Analytics dashboard</li>
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Priority support</li>
                 </ul>
-                <button
-                  type="button"
-                  onClick={() => scrollToId("contact")}
-                  className="w-full rounded-lg bg-sky-600 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-500"
+                <a
+                  href="https://app.theprintroute.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-lg bg-sky-600 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-sky-500"
                 >
-                  Request access
-                </button>
+                  Get started →
+                </a>
               </div>
 
               {/* Scale */}
@@ -596,13 +582,14 @@ function App() {
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>API access</li>
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Dedicated onboarding</li>
                 </ul>
-                <button
-                  type="button"
-                  onClick={() => scrollToId("contact")}
-                  className="w-full rounded-lg border border-slate-600 py-2.5 text-sm font-semibold text-white transition hover:border-slate-400"
+                <a
+                  href="https://app.theprintroute.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-lg border border-slate-600 py-2.5 text-center text-sm font-semibold text-white transition hover:border-slate-400"
                 >
-                  Request access
-                </button>
+                  Get started →
+                </a>
               </div>
             </div>
           </div>
@@ -658,16 +645,34 @@ function App() {
         >
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
-              Early access
+              Get started
             </h2>
             <p className="mt-2 text-lg font-semibold text-slate-50 md:text-2xl">
-              Ready to route your first print orders through The Print Route?
+              Ready to route your first print orders?
             </p>
             <p className="mt-2 text-sm text-slate-400 md:text-base">
-              We&apos;re building the first version focused on apps like TAN and
-              workflow tools like n8n. Share your use case and we&apos;ll send a
-              short activation plan.
+              The platform is live. Create an account at{" "}
+              <a
+                href="https://app.theprintroute.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-400 underline underline-offset-2 hover:text-sky-300"
+              >
+                app.theprintroute.com
+              </a>{" "}
+              and place your first order in minutes. Or send us a message below if you want a guided onboarding.
             </p>
+            <div className="mt-6 flex justify-center">
+              <a
+                href="https://app.theprintroute.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary text-base px-6 py-3"
+              >
+                Open app → app.theprintroute.com
+              </a>
+            </div>
+            <p className="mt-6 text-xs text-slate-500">Or reach out for a custom onboarding below</p>
             <EarlyAccessForm />
           </div>
         </section>
@@ -714,9 +719,12 @@ function App() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-between gap-3 border-t border-slate-800 pt-5 text-[11px] text-slate-500 md:flex-row">
-            <p>© {new Date().getFullYear()} The Print Route. All rights reserved. Part of{' '}
-              <a href="https://theunnamedroads.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-300 transition-colors">theunnamedroads.com</a>
-            </p>
+            <div className="flex items-center gap-2">
+              <img src="/logo.svg" alt="The Print Route" className="h-5 w-5 opacity-60" />
+              <p>© {new Date().getFullYear()} The Print Route. All rights reserved. Part of{' '}
+                <a href="https://theunnamedroads.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-300 transition-colors">theunnamedroads.com</a>
+              </p>
+            </div>
             <div className="flex gap-3">
               <span>GDPR-friendly: no live customer PII in this demo.</span>
             </div>
