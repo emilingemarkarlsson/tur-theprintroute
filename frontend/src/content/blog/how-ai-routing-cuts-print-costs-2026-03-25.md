@@ -1,8 +1,8 @@
 ---
-title: "How AI Routing Cuts Print Costs by Up to 40%"
-description: "AI-powered print routing matches each job to the optimal provider based on cost, ETA, and capacity — cutting procurement costs by up to 40% without manual intervention."
+title: "How automated print routing reduces procurement costs"
+description: "Rule-based routing matches each print job to the optimal provider based on capabilities, price, and delivery country — eliminating manual coordination without sacrificing control."
 publishDate: 2026-03-25
-tags: ["print routing", "AI", "cost optimization", "supply chain"]
+tags: ["print routing", "automation", "cost optimisation", "procurement"]
 author: The Print Route
 draft: false
 ---
@@ -13,9 +13,9 @@ Most print procurement teams still route jobs manually — forwarding PDFs by em
 
 A typical enterprise running 500+ print jobs per month loses an average of 18–40% in avoidable costs through suboptimal routing decisions. The culprit isn't laziness — it's the sheer volume of variables involved in each decision.
 
-## What AI Routing Actually Does
+## What automated routing actually does
 
-AI routing doesn't replace your print partners. It makes better use of them.
+Automated routing doesn't replace your print partners. It makes better use of them.
 
 When a new job arrives — say, 1,000 A3 posters destined for Stockholm — the system evaluates every available provider against four dimensions:
 
@@ -38,10 +38,10 @@ Teams using automated routing consistently report three measurable outcomes:
 
 ## The Routing Logic
 
-The routing engine combines rule-based logic with machine learning:
+The routing engine works on structured capability matching:
 
 1. **Hard rules first** — e.g., all Sweden large-format jobs route to Nordic providers
-2. **Soft scoring** — cost, ETA, and quality history scored and weighted
+2. **Price ranking** — among eligible providers, the lowest total cost wins
 3. **Fallback chains** — if primary provider is unavailable, cascade to alternatives
 
 The result is a deterministic, auditable decision — not a black box. Every routing choice is logged with the reason it was made.
@@ -51,3 +51,8 @@ The result is a deterministic, auditable decision — not a black box. Every rou
 The Print Route connects to your existing workflow via webhook. You send a structured JSON payload with job details, and receive a routing decision and tracking ID back within seconds.
 
 No custom integrations. No renegotiating contracts. Just better decisions on every job.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

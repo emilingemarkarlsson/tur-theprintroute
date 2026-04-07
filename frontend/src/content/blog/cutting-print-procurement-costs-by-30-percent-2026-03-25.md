@@ -1,8 +1,8 @@
 ---
-title: "Cutting Print Procurement Costs By 30 Percent"
-description: "A data-driven analysis of where print procurement costs actually come from — and how to cut them by 30% through supplier consolidation, spec standardisation, and digital workflows."
+title: "How to cut print procurement costs by 30%"
+description: "A data-driven look at where print procurement costs actually come from — and how supplier consolidation, spec standardisation, and automated workflows drive real savings."
 publishDate: "2026-03-25"
-tags: ["print", "procurement"]
+tags: ["procurement", "cost optimisation", "print management", "supply chain"]
 ---
 
 ## Introduction to Cutting Print Procurement Costs
@@ -37,3 +37,8 @@ Finally, measuring and monitoring print procurement costs is crucial to achievin
 
 ## Conclusion
 Cutting print procurement costs by 30 percent is a achievable goal for businesses of all sizes. By implementing a few strategic changes, such as analyzing current print procurement processes, implementing a print management system, consolidating print suppliers, standardizing print products, implementing a sustainable print policy, negotiating better prices with print suppliers, implementing a cost-per-page model, and measuring and monitoring print procurement costs, businesses can achieve significant cost savings without compromising on quality. By taking a proactive approach to print procurement, businesses can reduce waste, improve efficiency, and improve their bottom line.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

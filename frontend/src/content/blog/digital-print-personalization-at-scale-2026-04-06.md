@@ -1,8 +1,8 @@
 ---
-title: "Digital Print Personalization At Scale"
-description: "The rise of digital print personalization has revolutionized the way businesses communicate with their customers. With the ability to produce high-quality, cust"
+title: "Digital print personalisation at scale"
+description: "Variable data printing, web-to-print platforms, and data management — a practical guide to producing personalised printed materials without sacrificing speed or quality."
 publishDate: 2026-04-06
-tags: ["digital", "print", "personalization", "scale"]
+tags: ["variable data printing", "personalisation", "digital print", "marketing"]
 author: The Print Route
 draft: false
 ---
@@ -65,3 +65,8 @@ To get started with digital print personalization at scale, follow these actiona
 6. **Monitor and measure** the effectiveness of your digital print personalization campaigns, using metrics such as response rates, engagement, and return on investment.
 
 By following these steps and considering the benefits, challenges, and trade-offs of digital print personalization, businesses can successfully implement personalized print production at scale, driving increased customer engagement, loyalty, and revenue growth.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

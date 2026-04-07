@@ -1,8 +1,8 @@
 ---
-title: "Print Quality Control Automation"
-description: "The printing industry has undergone significant transformations in recent years, driven by advances in technology and the need for greater efficiency. One area "
+title: "Automating quality control in print production"
+description: "How print buyers and operations leads are using automated preflight, spec validation, and structured job data to catch quality issues before they reach production."
 publishDate: 2026-03-25
-tags: ["print", "quality", "control", "automation"]
+tags: ["quality control", "automation", "print production", "prepress"]
 author: The Print Route
 draft: false
 ---
@@ -69,3 +69,8 @@ To get started with print quality control automation, procurement managers, prin
 * Develop a comprehensive implementation plan, including training and support, to ensure that automated quality control systems are used effectively and efficiently.
 * Monitor and evaluate the performance of automated quality control systems, using data analytics and reporting to identify areas for improvement and optimize workflows.
 By following these steps and considering the benefits, trade-offs, and challenges of print quality control automation, printers can improve quality, increase efficiency, and reduce waste, achieving significant competitive advantages in the marketplace.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

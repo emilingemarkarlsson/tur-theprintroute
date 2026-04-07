@@ -1,8 +1,8 @@
 ---
-title: "The Hidden Costs of Print Production: A Data-Driven Analysis"
-description: "Most print buyers focus on unit price. Here is what actually drives total cost of print production — and how modern supply chain data can help you optimise it."
+title: "The hidden costs of print production"
+description: "Most print buyers focus on unit price. Here is what actually drives total cost — and how structured data across your supply chain helps you find and fix it."
 publishDate: "2026-03-24"
-tags: ["print production", "supply chain", "cost analysis", "manufacturing"]
+tags: ["cost analysis", "print procurement", "supply chain", "data"]
 ---
 
 The print industry has a pricing transparency problem. You request a quote, you get a number, and you accept it — often without understanding what is actually driving that number.
@@ -84,3 +84,8 @@ If you want to understand your actual print costs before optimizing them:
 4. Identify your top three cost drivers
 
 The number you find is almost always surprising. And once you see it, the optimization path becomes obvious.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

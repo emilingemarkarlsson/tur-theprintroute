@@ -1,8 +1,8 @@
 ---
-title: "Print Procurement Cost Optimization"
-description: "The print industry is a complex and multifaceted sector, with a vast array of products, services, and stakeholders. As a procurement manager or print buyer, nav"
+title: "A practical guide to print procurement cost optimisation"
+description: "From supplier selection to spec standardisation — a step-by-step approach to reducing total print spend without compromising on quality or delivery performance."
 publishDate: 2026-03-28
-tags: ["print", "procurement", "cost", "optimization"]
+tags: ["procurement", "cost optimisation", "supplier management", "print buying"]
 author: The Print Route
 draft: false
 ---
@@ -64,3 +64,8 @@ So, what are the actionable next steps for procurement professionals looking to 
 * Implement sustainable print practices to reduce waste, lower costs, and enhance environmental credentials.
 * Develop a comprehensive data and analytics strategy to inform decision-making and drive cost savings.
 * Engage with stakeholders, including suppliers, internal customers, and other procurement professionals, to share best practices and drive continuous improvement.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

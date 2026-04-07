@@ -1,8 +1,8 @@
 ---
-title: "Carbon Footprint Of Commercial Printing"
-description: "The commercial printing industry has long been criticized for its environmental impact, with concerns ranging from deforestation to greenhouse gas emissions. As"
+title: "The carbon footprint of commercial printing — and how to reduce it"
+description: "A practical guide to understanding where greenhouse gas emissions come from in print production, and the steps procurement managers can take to reduce them."
 publishDate: 2026-03-31
-tags: ["carbon", "footprint", "commercial", "printing"]
+tags: ["sustainability", "print production", "procurement", "carbon footprint"]
 author: The Print Route
 draft: false
 ---
@@ -65,3 +65,8 @@ To reduce the carbon footprint of commercial printing, procurement managers, pri
 5. **Monitor and report progress**: Monitor and report progress on sustainability goals and objectives, and make adjustments as needed.
 
 By taking these steps, procurement managers, print buyers, and operations leads can reduce the carbon footprint of commercial printing, contribute to a more sustainable future, and enhance their company's reputation and brand.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*

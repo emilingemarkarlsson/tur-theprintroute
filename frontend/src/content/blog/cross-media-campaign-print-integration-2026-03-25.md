@@ -1,8 +1,8 @@
 ---
-title: "Cross-media Campaign Print Integration"
-description: "The rise of digital media has led many to believe that print is no longer a vital component of marketing campaigns. However, the truth is that print remains a p"
+title: "Integrating print into cross-media campaigns"
+description: "How procurement teams can connect print production to digital campaign workflows — reducing lag, improving consistency, and closing the loop on campaign data."
 publishDate: 2026-03-25
-tags: ["cross-media", "campaign", "print", "integration"]
+tags: ["print production", "campaigns", "workflow", "procurement"]
 author: The Print Route
 draft: false
 ---
@@ -56,3 +56,8 @@ So how can you get started with print integration in cross-media campaigns? Here
 * **Develop a cross-media strategy**: Develop a cross-media strategy that outlines your marketing goals, target audience, and budget.
 * **Integrate print with digital channels**: Integrate print with digital channels using technologies such as QR codes, NFC tags, and augmented reality.
 * **Measure and optimize**: Finally, measure the effectiveness of your cross-media campaign and optimize as needed. Use metrics such as response rates, conversion rates, and ROI to determine which channels are driving the most engagement and conversions. By following these steps and using print integration in cross-media campaigns, you can create a cohesive and impactful brand experience that drives engagement and conversions.
+
+
+---
+
+*Routing print orders manually across multiple providers? [The Print Route](/docs) automates provider matching, order tracking, and webhook callbacks via a simple REST API — so your team spends less time on coordination and more on output.*
