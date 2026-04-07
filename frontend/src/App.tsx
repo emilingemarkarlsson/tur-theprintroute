@@ -515,32 +515,31 @@ function App() {
               Pricing
             </h2>
             <p className="mt-2 text-lg font-semibold text-slate-50 md:text-2xl">
-              Start free. Scale as you grow.
+              Pay per order. No monthly fees.
             </p>
             <p className="mt-1 mb-8 max-w-xl text-sm text-slate-400">
-              Early access pricing — lock in your rate before public launch.
+              Billing is token-based — top up a credit balance and tokens are debited per routed order. Platform fee is a percentage of the order value.
             </p>
             <div className="grid gap-6 md:grid-cols-3">
-              {/* Starter */}
+              {/* Pilot */}
               <div className="rounded-2xl border border-slate-700 bg-slate-900/40 p-6 space-y-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Starter</p>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Pilot</p>
                   <p className="mt-1 text-3xl font-bold text-white">Free</p>
-                  <p className="text-xs text-slate-500 mt-0.5">Up to 50 orders/month</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Trial token credit included</p>
                 </div>
                 <ul className="space-y-2 text-sm text-slate-400">
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Smart routing engine</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>2 print providers</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Unified tracking</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Webhook intake</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Full routing engine</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Access to provider network</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>API + customer portal</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Webhook callbacks</li>
                 </ul>
                 <a
-                  href="https://app.theprintroute.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contact"
+                  onClick={(e) => { e.preventDefault(); scrollToId("contact"); }}
                   className="block w-full rounded-lg border border-slate-600 py-2.5 text-center text-sm font-semibold text-white transition hover:border-slate-400"
                 >
-                  Get started →
+                  Request access →
                 </a>
               </div>
 
@@ -548,47 +547,45 @@ function App() {
               <div className="rounded-2xl border border-sky-500/50 bg-sky-950/20 p-6 space-y-4 ring-1 ring-sky-500/20">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-widest text-sky-400">Growth</p>
-                  <p className="mt-1 text-3xl font-bold text-white">€99<span className="text-base font-normal text-slate-400">/mo</span></p>
-                  <p className="text-xs text-slate-500 mt-0.5">Up to 500 orders/month</p>
+                  <p className="mt-1 text-3xl font-bold text-white">10%<span className="text-base font-normal text-slate-400"> platform fee</span></p>
+                  <p className="text-xs text-slate-500 mt-0.5">Per routed order value</p>
                 </div>
                 <ul className="space-y-2 text-sm text-slate-300">
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Everything in Starter</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Unlimited providers</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Routing rules & cost caps</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Analytics dashboard</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Everything in Pilot</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Unlimited orders</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Multiple providers</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Order analytics</li>
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Priority support</li>
                 </ul>
                 <a
-                  href="https://app.theprintroute.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contact"
+                  onClick={(e) => { e.preventDefault(); scrollToId("contact"); }}
                   className="block w-full rounded-lg bg-sky-600 py-2.5 text-center text-sm font-semibold text-white transition hover:bg-sky-500"
                 >
-                  Get started →
+                  Request access →
                 </a>
               </div>
 
-              {/* Scale */}
+              {/* Enterprise */}
               <div className="rounded-2xl border border-slate-700 bg-slate-900/40 p-6 space-y-4">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Scale</p>
-                  <p className="mt-1 text-3xl font-bold text-white">€299<span className="text-base font-normal text-slate-400">/mo</span></p>
-                  <p className="text-xs text-slate-500 mt-0.5">Unlimited orders</p>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-slate-500">Enterprise</p>
+                  <p className="mt-1 text-3xl font-bold text-white">Custom</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Negotiated fee + volume</p>
                 </div>
                 <ul className="space-y-2 text-sm text-slate-400">
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Everything in Growth</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Multi-region routing</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Custom SLA rules</li>
-                  <li className="flex gap-2"><span className="text-sky-400">✓</span>API access</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Dedicated provider config</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>Custom routing rules</li>
+                  <li className="flex gap-2"><span className="text-sky-400">✓</span>SLA guarantees</li>
                   <li className="flex gap-2"><span className="text-sky-400">✓</span>Dedicated onboarding</li>
                 </ul>
                 <a
-                  href="https://app.theprintroute.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#contact"
+                  onClick={(e) => { e.preventDefault(); scrollToId("contact"); }}
                   className="block w-full rounded-lg border border-slate-600 py-2.5 text-center text-sm font-semibold text-white transition hover:border-slate-400"
                 >
-                  Get started →
+                  Talk to us →
                 </a>
               </div>
             </div>
