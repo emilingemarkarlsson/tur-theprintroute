@@ -737,7 +737,14 @@ function App() {
                 <a href="https://theunnamedroads.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-slate-300 transition-colors">theunnamedroads.com</a>
               </p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
+              <a
+                href="/docs"
+                onClick={(e) => { e.preventDefault(); setShowDocs(true); window.history.pushState({}, "", "/docs"); }}
+                className="hover:text-slate-300 transition-colors"
+              >
+                API Docs
+              </a>
               <span>GDPR-friendly: no live customer PII in this demo.</span>
             </div>
           </div>
