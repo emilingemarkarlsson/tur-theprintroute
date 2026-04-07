@@ -1,8 +1,5 @@
 import { useEffect, useState } from 'react';
 
-const LISTMONK_URL = 'https://n8n.theunnamedroads.com/webhook/newsletter-subscribe';
-const LIST_UUID = '9725bc88-729a-4344-99d2-5866a2d7b26b';
-
 export default function AnnouncementBar() {
   const [visible, setVisible] = useState(false);
 

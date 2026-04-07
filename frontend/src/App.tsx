@@ -70,7 +70,7 @@ function App() {
     }
   }, []);
 
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [theme] = useState<"light" | "dark">("dark");
   const [orders] = useState<Order[]>(mockOrders);
   const [mobileOpen, setMobileOpen] = useState(false);
 
