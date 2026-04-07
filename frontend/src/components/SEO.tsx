@@ -111,11 +111,6 @@ export const SEO: React.FC<SEOProps> = ({
         "API integration",
         "Workflow automation",
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.5",
-        ratingCount: "1",
-      },
     };
 
     // Organization Schema
@@ -124,7 +119,7 @@ export const SEO: React.FC<SEOProps> = ({
       "@type": "Organization",
       name: "The Print Route",
       url: url,
-      logo: `${url}/logo.png`,
+      logo: `${url}/og-image.jpg`,
       description: description,
       sameAs: [],
     };
@@ -136,14 +131,6 @@ export const SEO: React.FC<SEOProps> = ({
       name: "The Print Route",
       url: url,
       description: description,
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${url}/search?q={search_term_string}`,
-        },
-        "query-input": "required name=search_term_string",
-      },
     };
 
     // BreadcrumbList Schema

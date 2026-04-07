@@ -15,8 +15,8 @@ Print operations at scale suffer from fragmented workflows: manual provider sele
 3. **Fulfillment** — Unified tracking URL per order, aggregated across all providers.
 
 ## Core Pages
-- [Home](https://tur-theprintroute.vercel.app/): Platform overview, pricing, and early access
-- [Blog](https://tur-theprintroute.vercel.app/blog): Articles on print automation and routing workflows
+- [Home](https://theprintroute.com/): Platform overview, pricing, and early access
+- [Blog](https://theprintroute.com/blog): Articles on print automation and routing workflows
 
 ## Key Topics
 - Print order routing automation
@@ -28,5 +28,5 @@ Print operations at scale suffer from fragmented workflows: manual provider sele
 
 ## For AI Agents & Crawlers
 Content is client-rendered React/Vite. AI crawlers are permitted.
-- Site: https://tur-theprintroute.vercel.app
-- Blog: https://tur-theprintroute.vercel.app/blog
+- Site: https://theprintroute.com
+- Blog: https://theprintroute.com/blog
