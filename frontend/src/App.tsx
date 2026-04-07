@@ -154,6 +154,13 @@ function App() {
             </button>
             <button
               type="button"
+              onClick={() => scrollToId("customers")}
+              className="hover:text-slate-50"
+            >
+              Customers
+            </button>
+            <button
+              type="button"
               onClick={() => scrollToId("contact")}
               className="hover:text-slate-50"
             >
@@ -222,6 +229,16 @@ function App() {
                 className="text-left text-slate-200"
               >
                 Pricing
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  scrollToId("customers");
+                  setMobileOpen(false);
+                }}
+                className="text-left text-slate-200"
+              >
+                Customers
               </button>
               <button
                 type="button"
@@ -590,6 +607,49 @@ function App() {
                 </button>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* REFERENCE CUSTOMERS */}
+        <section
+          id="customers"
+          className="border-b border-slate-800 bg-slate-950 px-4 py-10 md:px-8"
+        >
+          <div className="mx-auto max-w-5xl">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-400">
+              Reference customer
+            </h2>
+            <p className="mt-2 text-lg font-semibold text-slate-50 md:text-2xl">
+              Trusted by teams that run real print operations.
+            </p>
+            <p className="mt-2 max-w-2xl text-sm text-slate-400 md:text-base">
+              The Print Route is used as routing infrastructure for customer flows
+              where speed, predictable fulfillment, and order visibility are critical.
+            </p>
+
+            <article className="mt-6 rounded-2xl border border-slate-800 bg-slate-900/40 p-5 md:p-6">
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div className="flex items-center gap-4">
+                  <img
+                    src="/reference-customers/the-price-lab.svg"
+                    alt="The Price Lab logo"
+                    className="h-10 w-auto rounded bg-white px-2 py-1"
+                    loading="lazy"
+                  />
+                  <div>
+                    <h3 className="text-base font-semibold text-slate-100">
+                      The Price Lab
+                    </h3>
+                    <p className="text-xs text-slate-400 md:text-sm">
+                      Reference customer
+                    </p>
+                  </div>
+                </div>
+                <span className="w-fit rounded-full border border-emerald-700/40 bg-emerald-900/20 px-2.5 py-1 text-[11px] font-medium text-emerald-300">
+                  Active implementation
+                </span>
+              </div>
+            </article>
           </div>
         </section>
 

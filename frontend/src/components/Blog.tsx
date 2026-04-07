@@ -1,4 +1,7 @@
 import { getAllPosts, getPostBySlug } from "../lib/blog";
+import { SEO } from "./SEO";
+
+const baseUrl = "https://theprintroute.com";
 
 interface BlogProps {
   slug?: string;
@@ -10,6 +13,11 @@ function BlogList({ onNavigate }: { onNavigate: (slug: string) => void }) {
   const posts = getAllPosts();
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
+      <SEO
+        title="Blog – The Print Route"
+        description="Insights on print production, manufacturing workflows, and supply chain innovation."
+        url={`${baseUrl}/blog`}
+      />
       <div className="max-w-3xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold mb-3 text-slate-50">The Print Route Blog</h1>
         <p className="text-slate-400 mb-12">Insights on print production, manufacturing workflows, and supply chain innovation.</p>
@@ -56,6 +64,11 @@ function BlogPost({ slug, onBack }: { slug: string; onBack: () => void }) {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50">
+      <SEO
+        title={`${post.title} – The Print Route`}
+        description={post.description}
+        url={`${baseUrl}/blog/${post.slug}`}
+      />
       <div className="max-w-3xl mx-auto px-6 py-16">
         <button onClick={onBack} className="text-sm text-slate-400 hover:text-slate-200 hover:underline mb-8 inline-block">
           ← Back to blog
